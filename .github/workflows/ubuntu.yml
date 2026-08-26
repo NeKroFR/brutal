@@ -10,7 +10,7 @@ jobs:
     dump-toolchain:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: true
 
@@ -27,7 +27,7 @@ jobs:
             matrix:
                 toolchain: [gnu, llvm]
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: true
 
@@ -35,7 +35,7 @@ jobs:
               run: sources/build/scripts/setup-ubuntu.sh
 
             - name: Cache Toolchain (${{matrix.toolchain}})
-              uses: actions/cache@v2
+              uses: actions/cache@v6
               env:
                   cache-name: cached-user-compiler
               with:
@@ -58,7 +58,7 @@ jobs:
             matrix:
                 toolchain: [gnu, llvm]
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v3
               with:
                   submodules: true
 
@@ -66,7 +66,7 @@ jobs:
               run: sources/build/scripts/setup-ubuntu.sh
 
             - name: Cache Toolchain (${{matrix.toolchain}})
-              uses: actions/cache@v2
+              uses: actions/cache@v6
               env:
                   cache-name: cached-user-compiler
               with:

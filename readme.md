@@ -11,19 +11,9 @@
 
 # BRUTAL
 
-<a href="https://github.com/brutal-org/brutal/issues">
-  <img src="https://img.shields.io/github/issues/brutal-org/brutal">
-</a>
-<a href="https://github.com/brutal-org/brutal/network">
-  <img src="https://img.shields.io/github/forks/brutal-org/brutal">
-</a>
-<a href="https://github.com/brutal-org/brutal/stargazers">
-  <img src="https://img.shields.io/github/stars/brutal-org/brutal">
-</a>
 <a href="https://github.com/brutal-org/brutal/blob/main/license">
   <img src="https://img.shields.io/github/license/brutal-org/brutal">
 </a>
-<a href="https://codecov.io/gh/brutal-org/brutal"><img src="https://codecov.io/gh/brutal-org/brutal/branch/main/graph/badge.svg?token=T4R6TEF56Z" alt="codecov"></a>
 <a href="https://github.com/brutal-org/brutal/actions/workflows/ubuntu.yml"><img src="https://github.com/brutal-org/brutal/actions/workflows/ubuntu.yml/badge.svg" alt="Build and Test (Ubuntu)"></a>
 <a href="https://github.com/brutal-org/brutal/actions/workflows/darwin.yml"><img src="https://github.com/brutal-org/brutal/actions/workflows/darwin.yml/badge.svg" alt="Build and Test (Darwin)"></a>
 <br>
