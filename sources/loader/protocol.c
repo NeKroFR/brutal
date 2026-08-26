@@ -37,15 +37,15 @@ void efi_populate_mmap(HandoverMmap *mmap)
 
     for (size_t i = 0; i < desc_count; i++)
     {
-        desc = (EFIMemoryDescriptor *)((void *)desc + desc_size);
+        EFIMemoryDescriptor *entry = (EFIMemoryDescriptor *)((void *)desc + i * desc_size);
 
-        uint64_t base = desc->physical_start;
-        uint64_t size = desc->num_pages << 12;
+        uint64_t base = entry->physical_start;
+        uint64_t size = entry->num_pages << 12;
         HandoverMmapType type = HANDOVER_MMAP_USED;
 
-        if (desc->type != EFI_USER_KERNEL_MEMORY)
+        if (entry->type != EFI_USER_KERNEL_MEMORY)
         {
-            type = efi_mmap_type_to_handover[desc->type];
+            type = efi_mmap_type_to_handover[entry->type];
         }
 
         handover_mmap_append(

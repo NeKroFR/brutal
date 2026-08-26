@@ -113,10 +113,10 @@ VmmSpace memory_create(void)
 
     for (size_t i = 0; i < desc_count; i++)
     {
-        desc = (EFIMemoryDescriptor *)((void *)desc + desc_size);
+        EFIMemoryDescriptor *entry = (EFIMemoryDescriptor *)((void *)desc + i * desc_size);
 
-        uint64_t base = desc->physical_start;
-        uint64_t size = desc->num_pages << 12;
+        uint64_t base = entry->physical_start;
+        uint64_t size = entry->num_pages << 12;
 
         memory_map_range(self,
                          (VmmRange){
